@@ -1,0 +1,7 @@
+function verificarAcesso(usuarioAutenticado, temPermissao) {
+    if (usuarioAutenticado && temPermissao) {
+        return "Acesso permitido! Bem-vindo ao sistema.";
+    } else {
+        return "Acesso negado: Autenticação ou permissão inválida.";
+    }
+}
