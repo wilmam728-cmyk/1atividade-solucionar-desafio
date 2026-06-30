@@ -1,0 +1,19 @@
+function calcularMedia(notas) {
+    if (notas.length !== 4) {
+        return "Por favor, forneça exatamente 4 notas.";
+    }
+
+    // Soma as 4 notas
+    let soma = notas.reduce((total, nota) => total + nota, 0);
+
+    // Calcula a média
+    let media = soma / 4;
+
+    return media;
+}
+
+// Exemplo de uso:
+const notasAluno = [7.5, 8.0, 6.5, 9.0];
+const resultadoMedia = calcularMedia(notasAluno);
+
+console.log(`A média do aluno é: ${resultadoMedia.toFixed(2)}`);
