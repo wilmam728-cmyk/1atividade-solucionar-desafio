@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Practica03 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Quantos números você deseja informar? ");
+        int n = scanner.nextInt();
+
+        int soma = 0;
+
+        // Repete N vezes para ler os números do usuário
+        for (int i = 1; i <= n; i++) {
+            System.out.print("Digite o " + i + "º número: ");
+            int numero = scanner.nextInt();
+            soma += numero; // Acumula o valor digitado
+        }
+
+        System.out.println("A soma dos números informados é: " + soma);
+
+        scanner.close();
+    }
+}
