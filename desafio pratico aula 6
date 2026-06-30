@@ -1,0 +1,38 @@
+// 1. Lê o caractere do teclado
+let entrada = prompt("Digite uma opção (A, C, E, I, F):");
+
+// 2. Verifica se o usuário digitou algo (evita erro se clicar em 'Cancelar')
+if (entrada !== null && entrada.length > 0) {
+    
+    // Pega apenas a primeira letra e transforma em minúscula
+    let opcao = entrada.charAt(0).toLowerCase();
+
+    // 3. Estrutura de escolha para exibir a mensagem correta
+    switch (opcao) {
+        case 'a':
+            console.log("Alteração");
+            alert("Alteração");
+            break;
+        case 'c':
+            console.log("Consulta");
+            alert("Consulta");
+            break;
+        case 'e':
+            console.log("Exclusão");
+            alert("Exclusão");
+            break;
+        case 'i':
+            console.log("Inclusão");
+            alert("Inclusão");
+            break;
+        case 'f':
+            console.log("Finalização");
+            alert("Finalização");
+            break;
+        default:
+            console.log("Opção inválida");
+            alert("Opção inválida");
+    }
+} else {
+    alert("Nenhuma opção foi digitada.");
+}
