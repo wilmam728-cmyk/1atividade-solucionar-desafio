@@ -1,0 +1,35 @@
+// 1. Lê a quantidade total de produtos (simulado via prompt)
+let totalProdutos = parseInt(prompt("Digite a quantidade de produtos a enviar:"));
+
+if (!isNaN(totalProdutos) && totalProdutos >= 0) {
+    console.log(`Quantidade total de produtos: ${totalProdutos}\n`);
+
+    // 2. Processa as caixas Extra-Grandes (capacidade 50)
+    let extraGrandes = Math.floor(totalProdutos / 50);
+    let resto = totalProdutos % 50;
+
+    // 3. Processa as caixas Grandes (capacidade 20)
+    let grandes = Math.floor(resto / 20);
+    resto = resto % 20;
+
+    // 4. Processa as caixas Médias (capacidade 5)
+    let medias = Math.floor(resto / 5);
+    resto = resto % 5;
+
+    // 5. O que sobrou vai para as caixas Pequenas (capacidade 1)
+    let pequenas = resto;
+
+    // 6. Exibe o resultado final no console
+    console.log("Distribuição das caixas:");
+    console.log(`- Caixas Extra-Grandes (50 un.): ${extraGrandes}`);
+    console.log(`- Caixas Grandes (20 un.): ${grandes}`);
+    console.log(`- Caixas Médias (5 un.): ${medias}`);
+    console.log(`- Caixas Pequenas (1 un.): ${pequenas}`);
+    
+    // Total de caixas utilizadas
+    let totalCaixas = extraGrandes + grandes + medias + pequenas;
+    console.log(`\nTotal de caixas utilizadas: ${totalCaixas}`);
+
+} else {
+    console.log("Por favor, insira uma quantidade válida de produtos.");
+}
