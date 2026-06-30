@@ -1,0 +1,36 @@
+// Definição da senha correta e do limite de tentativas
+const SENHA_CORRETA = "1234";
+const LIMITE_TENTATIVAS = 3;
+
+let tentativas = 0;
+let senhaDigitada;
+let acessoConcedido = false;
+
+do {
+    // 1. Solicita a senha ao usuário
+    senhaDigitada = prompt("Digite sua senha de 4 dígitos:");
+    tentativas++;
+
+    // 2. Valida a senha
+    if (senhaDigitada === SENHA_CORRETA) {
+        acessoConcedido = true;
+    } else {
+        // Calcula quantas chances ainda restam
+        let restantes = LIMITE_TENTATIVAS - tentativas;
+        
+        if (restantes > 0) {
+            alert(`Senha incorreta! Você ainda tem ${restantes} tentativa(s).`);
+        }
+    }
+
+// 3. O laço continua enquanto a senha estiver errada E não atingir o limite
+} while (!acessoConcedido && tentativas < LIMITE_TENTATIVAS);
+
+// 4. Feedback final ao usuário
+if (acessoConcedido) {
+    console.log("Acesso permitido. Seja bem-vindo!");
+    alert("Acesso permitido. Seja bem-vindo!");
+} else {
+    console.log("Acesso bloqueado! Você excedeu o limite de 3 tentativas.");
+    alert("Acesso bloqueado! Você excedeu o limite de 3 tentativas.");
+}
