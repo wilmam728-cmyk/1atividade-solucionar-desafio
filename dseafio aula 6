@@ -1,0 +1,26 @@
+function executarOperacao(P, A, B, C) {
+    if (P === 1) {
+        let media = (A + B + C) / 3;
+        console.log("Média aritmética: " + media);
+    } 
+    else if (P === 2) {
+        let soma = A + B + C;
+        console.log("Soma dos valores: " + soma);
+    } 
+    else if (P === 3) {
+        if (B % 2 === 0) {
+            console.log("O valor de B é par: " + B);
+        } else {
+            console.log("O valor de B é ímpar: " + B);
+        }
+    } 
+    else {
+        console.log("operação inválida");
+    }
+}
+
+// Exemplos de uso:
+executarOperacao(1, 10, 20, 30); // Calcula a média
+executarOperacao(2, 10, 20, 30); // Calcula a soma
+executarOperacao(3, 10, 25, 30); // Verifica se B (25) é par ou ímpar
+executarOperacao(4, 10, 20, 30); // Operação inválida
