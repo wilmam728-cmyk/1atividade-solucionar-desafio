@@ -1,0 +1,9 @@
+let dividendo = 50; // Substitua pelo valor lido
+let divisor = 5;    // Substitua pelo valor lido
+
+if (divisor === 0) {
+    console.error("Erro: Não é possível efetuar uma divisão por zero.");
+} else {
+    let quociente = dividendo / divisor;
+    console.log(`O quociente da divisão é: ${quociente}`);
+}
