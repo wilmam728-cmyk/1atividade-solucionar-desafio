@@ -1,0 +1,14 @@
+// Exemplo de índice de poluição
+const indicePoluicao = 45; // Altere este valor para testar
+
+if (typeof indicePoluicao === 'number') {
+    if (indicePoluicao < 35) {
+        console.log(`Índice ${indicePoluicao}: Agradável`);
+    } else if (indicePoluicao <= 60) {
+        console.log(`Índice ${indicePoluicao}: Desagradável`);
+    } else {
+        console.log(`Índice ${indicePoluicao}: Perigoso`);
+    }
+} else {
+    console.log("Por favor, digite um valor numérico válido.");
+}
